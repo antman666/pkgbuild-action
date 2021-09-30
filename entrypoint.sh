@@ -216,6 +216,7 @@ SRCEXT='.src.tar.gz'
 #-- Command used to run pacman as root, instead of trying sudo and su
 #PACMAN_AUTH=()
 EOM
+updpkgsums
 sudo -H -u builder makepkg --syncdeps --noconfirm ${INPUT_MAKEPKGARGS:-}
 
 # Get array of packages to be built
