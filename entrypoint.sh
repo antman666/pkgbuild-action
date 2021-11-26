@@ -12,7 +12,9 @@ EOM
 pacman -Syu --noconfirm --needed base-devel pacman-contrib wget
 
 wget -c https://github.com/antman666/own_repo/releases/download/x86_64/gcc-11.2.0-1-x86_64.pkg.tar.zst
+wget -c https://github.com/antman666/own_repo/releases/download/x86_64/gcc-libs-11.2.0-1-x86_64.pkg.tar.zst
 
+pacman -U --noconfirm --needed gcc-libs-11.2.0-1-x86_64.pkg.tar.zst
 pacman -U --noconfirm --needed gcc-11.2.0-1-x86_64.pkg.tar.zst
 
 # Makepkg does not allow running as root
