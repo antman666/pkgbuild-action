@@ -9,7 +9,12 @@ cat << EOM >> /etc/pacman.conf
 Include = /etc/pacman.d/mirrorlist
 EOM
 
+echo "[kernels]" >> /etc/pacman.conf
+echo "SigLevel = Never" >> /etc/pacman.conf
+echo 'Server = https://github.com/antman666/kernel-repo/releases/download/$arch' >> /etc/pacman.conf
+
 pacman -Syu --noconfirm --needed base-devel pacman-contrib
+
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
