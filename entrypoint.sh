@@ -1,5 +1,5 @@
 #!/bin/bash
-export PACKAGER="antman666 <945360554@qq.com>"
+export PACKAGER="AntMan666 <945360554@qq.com>"
 set -euo pipefail
 
 FILE="$(basename "$0")"
