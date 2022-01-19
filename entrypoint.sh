@@ -52,6 +52,7 @@ fi
 # Build packages
 # INPUT_MAKEPKGARGS is intentionally unquoted to allow arg splitting
 # shellcheck disable=SC2086
+echo 'PACKAGER="AntMan666 <945360554@qq.com>"' >> /etc/makepkg.conf
 sudo -H -u builder updpkgsums
 sudo -H -u builder makepkg --syncdeps --noconfirm ${INPUT_MAKEPKGARGS:-}
 
