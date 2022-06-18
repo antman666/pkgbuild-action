@@ -11,7 +11,8 @@ Include = /etc/pacman.d/mirrorlist
 EOM
 
 pacman -Syu --noconfirm --needed base-devel pacman-contrib wget
-
+wget -c https://www.archlinux.club/x86_64/llvm+clang-14.0.5-1-x86_64.pkg.tar.zst
+pacman -U --noconfirm llvm+clang-14.0.5-1-x86_64.pkg.tar.zst
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
