@@ -19,7 +19,7 @@ wget -c https://www.archlinux.club/x86_64/libgccjit-12.1.1-1-x86_64.pkg.tar.zst
 wget -c https://www.archlinux.club/x86_64/glibc-2.35-15-x86_64.pkg.tar.zst
 wget -c https://www.archlinux.club/x86_64/jemalloc+clang-1:5.3.0-1-x86_64.pkg.tar.zst
 wget -c https://www.archlinux.club/x86_64/binutils+clang-2.38-6-x86_64.pkg.tar.zst
-pacman -U --noconfirm *.zst
+yes | pacman -U --noconfirm *.zst
 rm *.zst
 
 # Makepkg does not allow running as root
