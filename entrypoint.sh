@@ -12,6 +12,7 @@ EOM
 
 pacman -Syu --noconfirm --needed base-devel pacman-contrib wget
 
+
 # Makepkg does not allow running as root
 # Create a new user `builder`
 # `builder` needs to have a home directory because some PKGBUILDs will try to
