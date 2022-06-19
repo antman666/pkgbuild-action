@@ -10,12 +10,12 @@ cat << EOM >> /etc/pacman.conf
 Include = /etc/pacman.d/mirrorlist
 EOM
 
-pacman -Syu --noconfirm --needed base-devel pacman-contrib wget ccache
-wget -c https://www.archlinux.club/x86_64/llvm+clang-14.0.5-1-x86_64.pkg.tar.zst
-wget -c https://www.archlinux.club/x86_64/libclc+clang-14.0.0-1-any.pkg.tar.zst
-wget -c https://www.archlinux.club/x86_64/jemalloc+clang-1:5.3.0-1-x86_64.pkg.tar.zst
-pacman -U --noconfirm *.zst
-rm *.zst
+pacman -Syu --noconfirm --needed base-devel pacman-contrib wget ccache jemalloc
+# wget -c https://www.archlinux.club/x86_64/llvm+clang-14.0.5-1-x86_64.pkg.tar.zst
+# wget -c https://www.archlinux.club/x86_64/libclc+clang-14.0.0-1-any.pkg.tar.zst
+# wget -c https://www.archlinux.club/x86_64/jemalloc+clang-1:5.3.0-1-x86_64.pkg.tar.zst
+# pacman -U --noconfirm *.zst
+# rm *.zst
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
