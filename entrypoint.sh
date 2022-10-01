@@ -5,17 +5,17 @@ set -euo pipefail
 FILE="$(basename "$0")"
 
 # Enable the multilib repository
-cat << EOM >> /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-EOM
+# cat << EOM >> /etc/pacman.conf
+# [multilib]
+# Include = /etc/pacman.d/mirrorlist
+# EOM
 
 pacman -Syu --noconfirm --needed base-devel pacman-contrib wget
-wget -qc https://www.archlinux.club/x86_64/llvm+clang-14.0.6-2-x86_64.pkg.tar.zst
-wget -qc https://www.archlinux.club/x86_64/libclc+clang-14.0.6-1-any.pkg.tar.zst
-wget -qc https://www.archlinux.club/x86_64/jemalloc+clang-1:5.3.0-1-x86_64.pkg.tar.zst
-pacman -U --noconfirm *.zst
-rm *.zst
+# wget -qc https://www.archlinux.club/x86_64/llvm+clang-14.0.6-2-x86_64.pkg.tar.zst
+# wget -qc https://www.archlinux.club/x86_64/libclc+clang-14.0.6-1-any.pkg.tar.zst
+# wget -qc https://www.archlinux.club/x86_64/jemalloc+clang-1:5.3.0-1-x86_64.pkg.tar.zst
+# pacman -U --noconfirm *.zst
+# rm *.zst
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
