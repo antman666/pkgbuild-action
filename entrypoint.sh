@@ -5,10 +5,10 @@ set -euo pipefail
 FILE="$(basename "$0")"
 
 # Enable the multilib repository
-cat << EOM >> /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-EOM
+# cat << EOM >> /etc/pacman.conf
+# [multilib]
+# Include = /etc/pacman.d/mirrorlist
+# EOM
 
 pacman -Syu --noconfirm --needed base-devel pacman-contrib wget ccache
 # wget -qc https://www.archlinux.club/x86_64/llvm+clang-14.0.6-2-x86_64.pkg.tar.zst
