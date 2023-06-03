@@ -10,7 +10,13 @@ FILE="$(basename "$0")"
 # Include = /etc/pacman.d/mirrorlist
 # EOM
 
-pacman -Syu --noconfirm --needed base-devel pacman-contrib spirv-llvm-translator jemalloc llvm
+pacman -Syu --noconfirm --needed base-devel pacman-contrib spirv-llvm-translator jemalloc llvm curl
+
+# Install rust manual
+curl https://sh.rustup.rs -sSf > rustup-init.sh
+bash ./rustup-init.sh -y
+source "$HOME/.cargo/env"
+#source "/github/workspace/.cargo/env"
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
