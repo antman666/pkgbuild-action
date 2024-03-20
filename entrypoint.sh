@@ -10,7 +10,7 @@ FILE="$(basename "$0")"
 # Include = /etc/pacman.d/mirrorlist
 # EOM
 
-pacman -Syu --noconfirm --needed base-devel pacman-contrib ccache jemalloc
+pacman -Syu --noconfirm --needed base-devel pacman-contrib ccache jemalloc git
 
 # Makepkg does not allow running as root
 # Create a new user `builder`
