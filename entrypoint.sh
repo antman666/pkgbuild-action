@@ -10,7 +10,7 @@ FILE="$(basename "$0")"
 # Include = /etc/pacman.d/mirrorlist
 # EOM
 
-pacman -Syu --noconfirm --needed base-devel pacman-contrib spirv-llvm-translator jemalloc llvm
+pacman -Syu --noconfirm --needed base-devel pacman-contrib spirv-llvm-translator jemalloc llvm git
 
 # Install rust manual
 #curl https://sh.rustup.rs -sSf > rustup-init.sh
